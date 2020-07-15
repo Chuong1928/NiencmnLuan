@@ -1,0 +1,104 @@
+#main{
+	background-color: #0e1765;
+	padding: 0;
+	margin: 0;
+}
+#main h1{
+  font-family: "Myriad Pro";
+ 	color: chocolate;
+  text-align: center;
+}
+.information{
+	position: relative;
+	top: 10%;
+}
+#mycontent{
+	width: 98%;
+	padding: 0;
+	margin: 0;
+}
+body .info{
+	border: 5px inset;
+	height: 200px;
+}
+.information h2{
+	line-height: 60px;
+}
+.info .name{
+	float: left;
+	width: 50%;
+	font-size: 20px;
+	font-family: 'Lato';
+	color: red;
+}
+.ques{
+	position: relative;
+	top: 10px;
+	font-size: 20px;
+	font-family: 'Lato';
+	color: blue;
+}
+.info .birth{
+	float: left;
+	width: 49%;
+	font-size: 20px;
+	font-family: 'Lato';
+	color: red;
+}
+.question{
+	position: relative;
+	height: auto;
+	background-color: #152f7133;
+	border: 1px solid transparent;
+}
+.ques_num{
+position: relative;
+    left: 2%;
+}
+#question{
+	position: relative;
+	left: 2%;
+	font-style: 10px;
+	color: red;
+}
+.anwser{
+	line-height: 40px;
+	position: relative;
+	left: 2%;
+}
+.ques_conntent{
+	    padding: 14px;
+}
+.checkbox{
+	height: 200px;
+}
+.list_ques{
+	border: 5px inset;
+	position: relative;
+	height: auto;
+	line-height: 10px;
+}
+#list_que{
+    background-color: #152f7133;
+    text-align: center;
+    font-size: 35px;
+}
+.list-q{
+	margin: 10px;
+}
+.confirm{
+	width: 100%;
+
+}
+.start{
+	left: 31%;
+    position: relative;
+    top: 50%;
+    bottom: -173px;
+    width: 50%;
+    height: 100px;
+}
+.time{
+	font-size: 15px;
+	color: red;
+}
