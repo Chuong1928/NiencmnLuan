@@ -28,13 +28,13 @@
       <link href="./css/style.css" rel="stylesheet">
      <link href="./css/responsive.css" rel="stylesheet">
   <script type="text/javascript" src="./js/script.js"></script>
-   <script>
+<!--    <script>
         $(document).ready(function(){
           
-          $("input[name='chuyen_radio_tab_or_button']:eq(1) ").attr("checked","checked");
-           alert("helloworld");
+          $("input[name='daaapan']:eq(1) ").attr("checked","checked");
+           // alert("1");
         });
-      </script>
+      </script> -->
 </head>
 <body> 
 
@@ -87,11 +87,10 @@ Bắt Đầu Thi !
    <script type="text/javascript">
      $(document).ready(function() {
           $('.confirm').click(function(event) {
-            /* Act on the event */
     $.ajax({
     url: 'control.php',
     type: 'GET',
-    data: {index: "1"},
+    data: {index: "1",},
     success:function(data){
       
       $('.question').html(data);
@@ -120,7 +119,7 @@ Bắt Đầu Thi !
     <?php
         $i=1;
         for ($i=1; $i <=20 ; $i++) { 
-          echo '<input class="btn btn-primary list-q" name="chuyen_radio_tab_or_button" type="button" index=" '.$i.' " value="Câu '.$i.' ">';
+          echo '<input class="btn btn-primary list-q" type="button" truongdz=" '.$i.' " value="Câu '.$i.' ">';
          } 
      ?>
    </div>
@@ -132,7 +131,7 @@ Bắt Đầu Thi !
   jQuery(document).ready(function() {
     $('.list-q').click(function() {
   /* Act on the event */
-  var index = $(this).attr("index");
+  var index = $(this).attr("truongdz");
   $.ajax({
     url: 'control.php',
     type: 'GET',
@@ -147,39 +146,7 @@ Bắt Đầu Thi !
 });
   });
 </script>
-<script type="text/javascript">
-  $(document).ready(function(){
- $('.insert').click(function(){
- {
-   var el = this;
-   var id = this.id;
-   var splitid = id.split("_");
-   // Delete id
-   //dapancon
-   var dapan = "<?php echo $dapan; ?>";
-   var deleteid = splitid[1];
-   // AJAX Request
-   $.ajax({
-     url: 'insert.php',
-     type: 'POST',
-     data: { id:deleteid,da:dapan },
-     success:function(response){
-      if(response ==1){
-      }else{
 
-    alert('Lỗi');
-    alert(response);
-    //alert(id);
-      }
-
-    }
-   });
-}
- });
-
-});
-
-</script>
 <script>
     var seconds = 900;
     function timer() {
