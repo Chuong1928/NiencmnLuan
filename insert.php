@@ -10,12 +10,19 @@ $servername = "localhost";
 				    die("Connection failed: " . mysqli_connect_error());
 				}
 $id = $_POST['id'];
-$da=$_POST['da'];
+$da='';
+if(isset($_POST['da'])){
+	$da=$_POST['da'];
+}
+else{
+	$da='';
+}
+
 // echo($id);
 if($id != ""){
 	// sql to delete a record
 	// $sql = "INSERT into CA FROM hocsinh WHERE hocsinh.mahocsinh = '{$id}'";
-	$sql="UPDATE cauhoi SET DapAnChon = '{$da}' WHERE Mach = '{$id}' ";
+	$sql="UPDATE cauhoi SET Trangthai = '{$da}' WHERE Mach = '{$id}' ";
 	 // var_dump($sql);
 	// echo($sql);
 	// echo($da);
